@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WELCOME TO RELATIVE URL TEMPLATES</h1>
+
+    <!-- The following will create a link to other.html page.-->
+<!--    <a href="basic_app/other.html">THE OTHER PAGE</a>-->
+    <a href="{% url 'basic_app:other' %}">THE OTHER PAGE...</a>
+<!--    THE other here is same as name="other" in the baic_app/urls.py file-->
+    {% comment %} This is for Admin Page {% endcomment %}
+    <a href="{% url 'admin:index' %}">To ADMIN PAGE</a>
+
+    <!-- This is for going to index page-->
+    <a href="{% url 'index' %}">LINK TO INDEX!</a>
+</body>
+</html>
